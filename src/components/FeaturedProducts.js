@@ -1,5 +1,5 @@
 import React from "react";
-import '../src/styles/featuredproducts.css'; // Import main styles for Hero Section
+import '../styles/featuredproducts.css'; // Import main styles for Hero Section
 
 const FeaturedProducts = () => {
   return (
