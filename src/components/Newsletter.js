@@ -1,5 +1,5 @@
 import React from "react";
-import '../newsletter.css'; // Fixed the path using forward slashes
+import '../styles/newsletter.css'; // Fixed the path using forward slashes
 
 const Newsletter = () => {
   return (
