@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -19,6 +19,33 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+
+export default App;*/
+import React from "react";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import SaleBanner from "./components/SaleBanner";
+import CategoriesSection from "./components/CategoriesSection";
+import FeaturedProducts from "./components/FeaturedProducts";
+import Benefits from "./components/Benefits";
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <HeroSection />
+      <SaleBanner />
+      <CategoriesSection />
+      <FeaturedProducts />
+      <Benefits />
+      <Newsletter />
+      <Footer />
+    </>
   );
 }
 

@@ -1,0 +1,77 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url('../image/hero-section.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #0f0d0b;
+    padding: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;  
+    height: 90vh;
+    padding-left: 160px;
+}
+
+.hero-section h1 span {
+    display: block; 
+}
+.hero-section h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    word-spacing: 0;
+    letter-spacing: 1.5px;
+    font-size: 100px; /* Set font size */
+    line-height:1; /* Optional: Adjust line spacing */
+    margin: 0; /* Remove any default margin */
+}
+
+.hero-section p {
+    list-style: 1;
+    margin-top: 5px;
+}
+
+#h-btn .btn {
+    background: linear-gradient(to bottom, #383028, #0f0d0b); /* Gradient */
+    margin-top: 30px;
+    min-width: 150px; /* Ensures consistent button width */
+    text-align: center;
+    display: inline-block;
+    border: 2px solid black; /* Black border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Rectangular shape */
+    color: white; /* Text color */
+    font-size: 1rem; /* Font size */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+#h-btn .btn:hover {
+    background: linear-gradient(to bottom, #1a1916, #0f0d0b); /* Darker gradient on hover */
+    color: white; /* Maintain text color */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .newsletter .input-group {
+        width: 100% !important;
+    }
+}

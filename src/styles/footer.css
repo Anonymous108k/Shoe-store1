@@ -1,0 +1,11 @@
+.footer {
+    background-color: #212529;
+    color: white;
+}
+.footer .fab {
+    transition: transform 0.3s ease;
+}
+
+.footer .fab:hover {
+    transform: translateY(-3px);
+}
