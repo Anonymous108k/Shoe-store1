@@ -12,7 +12,7 @@ const FeaturedProducts = () => {
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <div className="position-relative">
                 <img
-                  src="/image/Women's Sneakers _ Trendy Tennis Shoes.jpeg"
+                  src="../public/image/urbanrunners.jpeg"
                   className="card-img-top"
                   alt="Product 1"
                 />
@@ -47,7 +47,7 @@ const FeaturedProducts = () => {
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <div className="position-relative">
                 <img
-                  src="/image/oxfords.jpeg"
+                  src="../public/image/oxfords.jpeg"
                   className="card-img-top"
                   alt="Product 2"
                 />
@@ -81,7 +81,7 @@ const FeaturedProducts = () => {
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <img
-                src="/image/Beach Accessories _ Flip Flops, Sandals, Swimming Rings _ Cupshe.jpeg"
+                src="../public/image/summerslides.jpeg"
                 className="card-img-top"
                 alt="Product 3"
               />
@@ -111,7 +111,7 @@ const FeaturedProducts = () => {
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <img
-                src="/image/New Balance Men's 530 Sneaker in Pearl, Men's at Urban Outfitters.jpeg"
+                src="../public/image/performance.jpeg"
                 className="card-img-top"
                 alt="Product 4"
               />

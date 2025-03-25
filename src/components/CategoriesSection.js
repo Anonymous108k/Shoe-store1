@@ -9,7 +9,7 @@ const CategoriesSection = () => {
             <div className="row g-4">
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="/image/sneakers.jpeg" className="img-fluid" alt="Sneakers" />
+                        <img src="../public/image/sneakers.jpeg" className="img-fluid" alt="Sneakers" />
                         <div className="category-overlay">
                             <span>Sneakers</span>
                         </div>
@@ -17,7 +17,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="/image/Your Favorite Heel - Nude _ 10_0.jpeg" className="img-fluid" alt="Formal" />
+                        <img src="../public/image/heels.jpeg" className="img-fluid" alt="Formal" />
                         <div className="category-overlay">
                             <span>Formal</span>
                         </div>
@@ -25,7 +25,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="/image/Salomon’s CROSS ADVANCED Is The Ultimate All-Terrain Sneaker.jpeg" className="img-fluid" alt="Sports" />
+                        <img src="../public/image/sports.jpeg" className="img-fluid" alt="Sports" />
                         <div className="category-overlay">
                             <span>Sports</span>
                         </div>
@@ -33,7 +33,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="/image/sandals.jpeg" className="img-fluid" alt="Sandals" />
+                        <img src="../public/image/sandals.jpeg" className="img-fluid" alt="Sandals" />
                         <div className="category-overlay">
                             <span>Sandals</span>
                         </div>
