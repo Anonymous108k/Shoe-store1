@@ -1,5 +1,9 @@
 import React from 'react';
 import '../styles/categories.css';
+import sneakers from '../image/sneakers.jpeg';
+import heels from '../image/heels.jpeg';
+import sports from '../image/sports.jpeg';
+import sandals from '../image/sandals.jpeg';
 
 const CategoriesSection = () => {
   return (
@@ -9,7 +13,7 @@ const CategoriesSection = () => {
             <div className="row g-4">
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="../public/image/sneakers.jpeg" className="img-fluid" alt="Sneakers" />
+                    <img src={sneakers} className="img-fluid" alt="Sneakers" />
                         <div className="category-overlay">
                             <span>Sneakers</span>
                         </div>
@@ -17,7 +21,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="../public/image/heels.jpeg" className="img-fluid" alt="Formal" />
+                    <img src={heels} className="img-fluid" alt="heels" />
                         <div className="category-overlay">
                             <span>Formal</span>
                         </div>
@@ -25,7 +29,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="../public/image/sports.jpeg" className="img-fluid" alt="Sports" />
+                    <img src={sports} className="img-fluid" alt="sports" />
                         <div className="category-overlay">
                             <span>Sports</span>
                         </div>
@@ -33,7 +37,7 @@ const CategoriesSection = () => {
                 </div>
                 <div className="col-md-3">
                     <div className="category-card">
-                        <img src="../public/image/sandals.jpeg" className="img-fluid" alt="Sandals" />
+                    <img src={sandals} className="img-fluid" alt="sndals" />
                         <div className="category-overlay">
                             <span>Sandals</span>
                         </div>

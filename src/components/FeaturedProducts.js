@@ -1,5 +1,9 @@
 import React from "react";
-import '../styles/featuredproducts.css'; // Import main styles for Hero Section
+import '../styles/featuredproducts.css';
+import urbanrunners from '../image/urbanrunners.jpeg';
+import oxfords from '../image/oxfords.jpeg';
+import summerslides from '../image/summerslides.jpeg';
+import performance from '../image/performance.jpeg';
 
 const FeaturedProducts = () => {
   return (
@@ -11,11 +15,7 @@ const FeaturedProducts = () => {
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <div className="position-relative">
-                <img
-                  src="../public/image/urbanrunners.jpeg"
-                  className="card-img-top"
-                  alt="Product 1"
-                />
+              <img src={urbanrunners} className="card-img-top" alt="Product-1" />
                 <span className="badge bg-danger position-absolute top-0 end-0 m-2">
                   New
                 </span>
@@ -46,11 +46,7 @@ const FeaturedProducts = () => {
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
               <div className="position-relative">
-                <img
-                  src="../public/image/oxfords.jpeg"
-                  className="card-img-top"
-                  alt="Product 2"
-                />
+              <img src={oxfords} className="card-img-top" alt="Product-2" />
                 <span className="badge bg-success position-absolute top-0 end-0 m-2">
                   -15%
                 </span>
@@ -80,11 +76,7 @@ const FeaturedProducts = () => {
           {/* Product Card 3 */}
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
-              <img
-                src="../public/image/summerslides.jpeg"
-                className="card-img-top"
-                alt="Product 3"
-              />
+              <img src={summerslides} className="card-img-top" alt="Product-3" />
               <div className="card-body">
                 <h5 className="card-title">Summer Slides</h5>
                 <div className="d-flex justify-content-between align-items-center">
@@ -110,11 +102,8 @@ const FeaturedProducts = () => {
           {/* Product Card 4 */}
           <div className="col-md-3">
             <div className="card featured-product-card h-100 border-0 shadow-sm">
-              <img
-                src="../public/image/performance.jpeg"
-                className="card-img-top"
-                alt="Product 4"
-              />
+            <img src={performance} className="card-img-top" alt="Product-4" />
+
               <div className="card-body">
                 <h5 className="card-title">Performance Runners</h5>
                 <div className="d-flex justify-content-between align-items-center">
