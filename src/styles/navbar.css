@@ -1,3 +1,26 @@
 .navbar-brand {
     letter-spacing: 1px;
 }
+.navbar {
+    height: 80px; /* Adjust this value to set the height */
+    line-height: 80px; /* Optionally align items vertically */
+  }
+  
+  .navbar .nav-link {
+    line-height: normal; /* Adjust for proper alignment of links */
+  }
+  .navbar-brand {
+    font-size: 1.8rem; /* Customize font size for brand */
+  }
+  
+  .nav-link {
+    font-size: 1.2rem; /* Customize font size for links */
+  }
+  
+  .dropdown-header {
+    font-size: 1.1rem; /* Customize dropdown header font size */
+  }
+  
+  .dropdown-item {
+    font-size: 1rem; /* Customize dropdown item font size */
+  }
