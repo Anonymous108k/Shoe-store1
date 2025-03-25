@@ -1,10 +1,18 @@
 import React from "react";
-import '../styles/herosection.css'; // Import main styles for Hero Section
+import heroImage from '../image/hero-section.jpg';
+import '../styles/herosection.css'; 
+
 
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section"
+    style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(${heroImage})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
+    }}
+    >
       <div className="container text-start">
         <h1 className="display-3 fw-light mb-3">
           <span>STEP INTO STYLE</span>
