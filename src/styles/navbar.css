@@ -1,6 +1,6 @@
 .navbar .container-fluid {
-  padding-left: 50px;  /* Adjust as needed */
-  padding-right: 50px; /* Adjust as needed */
+  padding-left: 100px;  /* Adjust as needed */
+  padding-right: 100px; /* Adjust as needed */
 }
 .navbar-brand {
   letter-spacing: 3px;
@@ -8,7 +8,7 @@
 
 .navbar {
   height: 90px;
-  line-height: 90px;
+  line-height: 80px;
 }
 
 .navbar .nav-link {
