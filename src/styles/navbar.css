@@ -4,11 +4,12 @@
 }
 .navbar-brand {
   letter-spacing: 1px;
+  line-height: 80px;
 }
 
 .nav-link {
   font-size: 20px;
-  word-spacing: 10px;
+  word-spacing: 16px;
 }
 
 .navbar {
