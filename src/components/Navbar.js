@@ -12,10 +12,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link fs-4" href="#">Home</a>
+              <a className="nav-link " href="#">Home</a>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link fs-4 dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link  dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Men
               </a>
               <ul className="dropdown-menu dropdown-menu-dark custom-dropdown" aria-labelledby="menDropdown">
@@ -43,7 +43,7 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link fs-4 dropdown-toggle" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link  dropdown-toggle" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Women
               </a>
               <ul className="dropdown-menu dropdown-menu-dark custom-dropdown" aria-labelledby="womenDropdown">
@@ -68,7 +68,7 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link fs-4 dropdown-toggle" href="#" id="kidsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link  dropdown-toggle" href="#" id="kidsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Kids
               </a>
               <ul className="dropdown-menu dropdown-menu-dark custom-dropdown" aria-labelledby="kidsDropdown">
@@ -92,16 +92,16 @@ const Navbar = () => {
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-4" href="#">Sale</a>
+              <a className="nav-link " href="#">Sale</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link fs-4" href="#">New Arrivals</a>
+              <a className="nav-link " href="#">New Arrivals</a>
             </li>
           </ul>
           <div className="d-flex align-items-center">
             <form className="d-flex me-3">
-              <input className="form-control me-2 fs-4" type="search" placeholder="Search shoes..."/>
-              <button className="btn btn-outline-light fs-4" type="submit">
+              <input className="form-control me-2 fs-5" type="search" placeholder="Search shoes..."/>
+              <button className="btn btn-outline-light fs-5" type="submit">
                 <i className="fas fa-search"></i>
               </button>
             </form>
