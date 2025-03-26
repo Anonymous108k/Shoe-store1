@@ -100,7 +100,7 @@ const Navbar = () => {
           </ul>
           <div className="d-flex align-items-center">
             <form className="d-flex me-3">
-              <input className="form-control me-2 fs-4" type="search" placeholder="Search shoes..."/>
+              <input className="form-control me-2 fs-5" type="search" placeholder="Search shoes..."/>
               <button className="btn btn-outline-light fs-5" type="submit">
                 <i className="fas fa-search"></i>
               </button>

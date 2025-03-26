@@ -1,3 +1,8 @@
+.container {
+  padding-left: 10px; /* Adjust the value as needed */
+  padding-right: 10px;
+}
+
 .navbar-brand {
   letter-spacing: 3px;
 }
