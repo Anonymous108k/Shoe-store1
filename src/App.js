@@ -24,7 +24,10 @@ function App() {
 
 export default App;*/
 import React from "react";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import SaleBanner from "./components/SaleBanner";
