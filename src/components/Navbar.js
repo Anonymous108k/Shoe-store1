@@ -4,7 +4,7 @@ import '../styles/navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
+      <div className="container-fluid px-4">
         <a className="navbar-brand fs-1 fw-bold" href="#">Stride</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
