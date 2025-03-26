@@ -18,6 +18,7 @@
     font-family: 'Bebas Neue', sans-serif;
     word-spacing: 0;
     letter-spacing: 1.5px;
+    font-weight: 150;
     font-size: 100px; /* Set font size */
     line-height:1; /* Optional: Adjust line spacing */
     margin: 0; /* Remove any default margin */
@@ -25,20 +26,20 @@
 
 .hero-section p {
     list-style: 1;
-    margin-top: 5px;
+    margin-top: 9px 0;
 }
 
 #h-btn .btn {
     background: linear-gradient(to bottom, #383028, #0f0d0b); /* Gradient */
-    margin-top: 50px;
-    min-width: 170px; /* Ensures consistent button width */
+    margin-top: 20px;
+    min-width: 200px; /* Ensures consistent button width */
     text-align: center;
     display: inline-block;
-    border: 2px solid black; /* Black border */
+    border: 2px #0f0d0b; /* Black border */
     border-radius: 12px; /* Rounded corners */
-    padding: 10px 20px; /* Rectangular shape */
+    padding: 13px 20px; /* Rectangular shape */
     color: white; /* Text color */
-    font-size: 1rem; /* Font size */
+    font-size: 1.25rem; /* Font size */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     transition: all 0.3s ease; /* Smooth hover effect */
 }
