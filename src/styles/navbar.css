@@ -9,14 +9,7 @@
   .navbar .nav-link {
     line-height: normal; /* Adjust for proper alignment of links */
   }
- /* .navbar-brand {
-    font-size: 3rem; /* Customize font size for brand */
- /* }*/
-  
-  .nav-link {
-    font-size: 2.5rem; /* Customize font size for links */
-  }
   
   .dropdown-item {
-    font-size: 16px; /* Customize dropdown item font size */
+    font-size: 1.25rem; /* Customize dropdown item font size */
   }
