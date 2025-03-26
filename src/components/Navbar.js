@@ -3,99 +3,50 @@ import '../styles/navbar.css';
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
-        <a className="navbar-brand fs-1 fw-bold" href="#">Stride</a>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div className="container-fluid px-5">
+        <a className="navbar-brand" href="#">STRIDE</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <a className="nav-link fs-5" href="#">Home</a>
-            </li>
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
             <li className="nav-item dropdown">
-              <a className="nav-link fs-5 dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Men
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="menDropdown">
-                <li><h6 className="dropdown-header fs-3">Casual</h6></li>
+              <a className="nav-link dropdown-toggle" href="#" id="menDropdown" data-bs-toggle="dropdown">Men</a>
+              <ul className="dropdown-menu dropdown-menu-clean" aria-labelledby="menDropdown">
+                <li><span className="dropdown-header">Categories</span></li>
                 <li><a className="dropdown-item" href="#">Sneakers</a></li>
-                <li><a className="dropdown-item" href="#">Loafers</a></li>
-                <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Formal</h6></li>
-                <li><a className="dropdown-item" href="#">Oxfords</a></li>
-                <li><a className="dropdown-item" href="#">Derbies</a></li>
-                <li><a className="dropdown-item" href="#">Monk Straps</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
-                <li><a className="dropdown-item" href="#">Running Shoes</a></li>
-                <li><a className="dropdown-item" href="#">Training Shoes</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
-                <li><a className="dropdown-item" href="#">Chelsea Boots</a></li>
-                <li><a className="dropdown-item" href="#">Hiking Boots</a></li>
+                <li><a className="dropdown-item" href="#">Formal</a></li>
+                <li><a className="dropdown-item" href="#">Casual</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link fs-5 dropdown-toggle" href="#" id="womenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Women
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="womenDropdown">
-                <li><h6 className="dropdown-header fs-3">Casual</h6></li>
+              <a className="nav-link dropdown-toggle" href="#" id="womenDropdown" data-bs-toggle="dropdown">Women</a>
+              <ul className="dropdown-menu dropdown-menu-clean" aria-labelledby="womenDropdown">
+                <li><span className="dropdown-header">Categories</span></li>
                 <li><a className="dropdown-item" href="#">Sneakers</a></li>
-                <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
-                <li><a className="dropdown-item" href="#">Loafers</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
-                <li><a className="dropdown-item" href="#">Running Shoes</a></li>
-                <li><a className="dropdown-item" href="#">Training Shoes</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
-                <li><a className="dropdown-item" href="#">Chelsea Boots</a></li>
-                <li><a className="dropdown-item" href="#">Ankle Boots</a></li>
+                <li><a className="dropdown-item" href="#">Running</a></li>
+                <li><a className="dropdown-item" href="#">Casual</a></li>
               </ul>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link fs-5 dropdown-toggle" href="#" id="kidsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Kids
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="kidsDropdown">
-                <li><h6 className="dropdown-header fs-3">Everyday</h6></li>
-                <li><a className="dropdown-item" href="#">Sneakers</a></li>
-                <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
-                <li><a className="dropdown-item" href="#">Running Shoes</a></li>
-                <li><a className="dropdown-item" href="#">Trainers</a></li>
-                <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
-                <li><a className="dropdown-item" href="#">Ankle Boots</a></li>
-                <li><a className="dropdown-item" href="#">Rain Boots</a></li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fs-5" href="#">Sale</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fs-5" href="#">New Arrivals</a>
-            </li>
+            <li className="nav-item"><a className="nav-link" href="#">Sale</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">New</a></li>
           </ul>
-          <div className="d-flex align-items-center">
+          <div className="navbar-tools d-flex align-items-center">
             <form className="d-flex me-3">
-              <input className="form-control me-2 fs-4" type="search" placeholder="Search shoes..."/>
-              <button className="btn btn-outline-light fs-5" type="submit">
-                <i className="fas fa-search"></i>
-              </button>
+              <input 
+                className="form-control form-control-sm search-input" 
+                type="search" 
+                placeholder="Search" 
+                aria-label="Search"
+              />
             </form>
-            <div className="text-light">  
-              <a href="#" className="text-light me-3"><i className="fas fa-user fs-3"></i></a>
-              <a href="#" className="text-light position-relative">
-                <i className="fas fa-shopping-cart fs-3"></i>
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  3
-                </span>
+            <div className="nav-icons">
+              <a href="#" className="text-dark me-3"><i className="fas fa-user"></i></a>
+              <a href="#" className="text-dark position-relative">
+                <i className="fas fa-shopping-cart"></i>
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">3</span>
               </a>
             </div>
           </div>
