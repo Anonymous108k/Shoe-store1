@@ -3,11 +3,12 @@
   padding-right: 100px; /* Adjust as needed */
 }
 .navbar-brand {
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 .nav-link {
   font-size: 22px;
+  word-spacing: 7px;
 }
 
 .navbar {
