@@ -1,4 +1,7 @@
-
+.navbar .container-fluid {
+  padding-left: 50px;  /* Adjust as needed */
+  padding-right: 50px; /* Adjust as needed */
+}
 .navbar-brand {
   letter-spacing: 3px;
 }
