@@ -1,5 +1,5 @@
 .navbar-brand {
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 .navbar {
     height: 90px; /* Adjust this value to set the height */
@@ -17,10 +17,6 @@
     font-size: 2.5rem; /* Customize font size for links */
   }
   
-  .dropdown-header {
-    font-size: 2.5rem; /* Customize dropdown header font size */
-  }
-  
   .dropdown-item {
-    font-size: 2rem; /* Customize dropdown item font size */
+    font-size: 16px; /* Customize dropdown item font size */
   }

@@ -19,21 +19,21 @@ const Navbar = () => {
                 Men
               </a>
               <ul className="dropdown-menu" aria-labelledby="menDropdown">
-                <li><h6 className="dropdown-header fs-6">Casual</h6></li>
+                <li><h6 className="dropdown-header fs-3">Casual</h6></li>
                 <li><a className="dropdown-item" href="#">Sneakers</a></li>
                 <li><a className="dropdown-item" href="#">Loafers</a></li>
                 <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Formal</h6></li>
+                <li><h6 className="dropdown-header fs-3">Formal</h6></li>
                 <li><a className="dropdown-item" href="#">Oxfords</a></li>
                 <li><a className="dropdown-item" href="#">Derbies</a></li>
                 <li><a className="dropdown-item" href="#">Monk Straps</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Sports</h6></li>
+                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
                 <li><a className="dropdown-item" href="#">Running Shoes</a></li>
                 <li><a className="dropdown-item" href="#">Training Shoes</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Boots</h6></li>
+                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
                 <li><a className="dropdown-item" href="#">Chelsea Boots</a></li>
                 <li><a className="dropdown-item" href="#">Hiking Boots</a></li>
               </ul>
@@ -43,16 +43,16 @@ const Navbar = () => {
                 Women
               </a>
               <ul className="dropdown-menu" aria-labelledby="womenDropdown">
-                <li><h6 className="dropdown-header fs-6">Casual</h6></li>
+                <li><h6 className="dropdown-header fs-3">Casual</h6></li>
                 <li><a className="dropdown-item" href="#">Sneakers</a></li>
                 <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
                 <li><a className="dropdown-item" href="#">Loafers</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Sports</h6></li>
+                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
                 <li><a className="dropdown-item" href="#">Running Shoes</a></li>
                 <li><a className="dropdown-item" href="#">Training Shoes</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Boots</h6></li>
+                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
                 <li><a className="dropdown-item" href="#">Chelsea Boots</a></li>
                 <li><a className="dropdown-item" href="#">Ankle Boots</a></li>
               </ul>
@@ -62,15 +62,15 @@ const Navbar = () => {
                 Kids
               </a>
               <ul className="dropdown-menu" aria-labelledby="kidsDropdown">
-                <li><h6 className="dropdown-header fs-6">Everyday</h6></li>
+                <li><h6 className="dropdown-header fs-3">Everyday</h6></li>
                 <li><a className="dropdown-item" href="#">Sneakers</a></li>
                 <li><a className="dropdown-item" href="#">Slip-Ons</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Sports</h6></li>
+                <li><h6 className="dropdown-header fs-3">Sports</h6></li>
                 <li><a className="dropdown-item" href="#">Running Shoes</a></li>
                 <li><a className="dropdown-item" href="#">Trainers</a></li>
                 <li><hr className="dropdown-divider"/></li>
-                <li><h6 className="dropdown-header fs-6">Boots</h6></li>
+                <li><h6 className="dropdown-header fs-3">Boots</h6></li>
                 <li><a className="dropdown-item" href="#">Ankle Boots</a></li>
                 <li><a className="dropdown-item" href="#">Rain Boots</a></li>
               </ul>
