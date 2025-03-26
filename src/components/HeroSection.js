@@ -19,8 +19,8 @@ const HeroSection = () => {
           WITH STRIDE!
         </h1>
         <p className="fs-5 mb-3">
-          Discover the perfect pair for every occasion and step out in style, comfort, and confidence.
-          Let your stride speak for itself!
+          Discover the perfect pair for every occasion and step out <br> in style, comfort, and confidence.
+          Let your stride speak for itself!</br>
         </p>
         <div id="h-btn" className="d-flex gap-3">
           <a href="#" className="btn btn-lg px-4">Shop Men</a>

@@ -30,12 +30,12 @@
 
 #h-btn .btn {
     background: linear-gradient(to bottom, #383028, #0f0d0b); /* Gradient */
-    margin-top: 30px;
-    min-width: 150px; /* Ensures consistent button width */
+    margin-top: 50px;
+    min-width: 170px; /* Ensures consistent button width */
     text-align: center;
     display: inline-block;
     border: 2px solid black; /* Black border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 12px; /* Rounded corners */
     padding: 10px 20px; /* Rectangular shape */
     color: white; /* Text color */
     font-size: 1rem; /* Font size */
