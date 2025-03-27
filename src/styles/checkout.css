@@ -1,0 +1,84 @@
+/* Checkout Page Specific Styles */
+.checkout-container {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+/* Form Styling */
+.form-label {
+    font-weight: 600;
+    color: #212529;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Payment Icons */
+.input-group-text {
+    background-color: transparent;
+    border-left: none;
+}
+
+.input-group .fab {
+    color: #6c757d;
+    font-size: 1.5rem;
+    margin: 0 4px;
+}
+
+/* Order Summary Card */
+.order-summary-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.order-summary-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Place Order Button */
+.place-order-btn {
+    background: linear-gradient(to bottom, #383028, #0f0d0b);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.place-order-btn:hover {
+    background: linear-gradient(to bottom, #1a1916, #0f0d0b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Secure Checkout Indicator */
+.secure-checkout-indicator {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.secure-checkout-indicator i {
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .checkout-container {
+        padding: 20px 0;
+    }
+}

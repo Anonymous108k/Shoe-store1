@@ -6,15 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import SaleBanner from "./components/SaleBanner";
-import CategoriesSection from "./components/CategoriesSection";
-import FeaturedProducts from "./components/FeaturedProducts";
-import Benefits from "./components/Benefits";
-import Newsletter from "./components/Newsletter";
 import Footer from "./components/Footer";
+import Home from "./pages/Home"; // Import the new Home.js file
 import SignUp from "./pages/SignUp";
-import Login from "./pages/Login"; 
+import Login from "./pages/Login";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+
 function App() {
   return (
     <Router>
@@ -24,16 +22,7 @@ function App() {
       {/* Conditional rendering of pages */}
       <Routes>
         {/* Home Page */}
-        <Route path="/" element={
-          <>
-            <HeroSection />
-            <SaleBanner />
-            <CategoriesSection />
-            <FeaturedProducts />
-            <Benefits />
-            <Newsletter />
-          </>
-        } />
+        <Route path="/" element={<Home />} />
 
         {/* SignUp Page */}
         <Route path="/signup" element={<SignUp />} />
@@ -41,6 +30,12 @@ function App() {
         {/* Login Page */}
         <Route path="/login" element={<Login />} />
 
+        {/* Cart Page */}
+        <Route path="/cart" element={<Cart />} />
+
+        {/* Checkout Page */}
+        <Route path="/checkout" element={<Checkout />} />
+        
       </Routes>
 
       {/* Footer is displayed on every page */}

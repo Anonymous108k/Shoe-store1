@@ -32,7 +32,7 @@ body {
 }
 
 .submit-btn {
-    background: linear-gradient(to bottom, #383028, #0f0d0b);
+    background: linear-gradient(to bottom, #343a40, #212529);
     border: none;
     border-radius: 8px;
     color: white;

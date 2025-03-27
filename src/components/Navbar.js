@@ -6,14 +6,14 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand fs-1 fw-bold" href="#">Stride</a>
+        <Link to="/" className="navbar-brand fs-1 fw-bold">Stride</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link " href="#">Home</a>
+             <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link  dropdown-toggle" href="#" id="menDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -108,12 +108,12 @@ const Navbar = () => {
             </form>
             <div className="text-light">  
               <Link to="/signup" className="text-light me-3"><i className="fas fa-user fs-3"></i></Link>
-              <a href="#" className="text-light position-relative">
+              <Link to="/cart" className="text-light position-relative">
                 <i className="fas fa-shopping-cart fs-3"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   3
                 </span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

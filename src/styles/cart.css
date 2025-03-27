@@ -1,0 +1,120 @@
+/* Cart Page Specific Styles */
+.cart-container {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 40px 0;
+}
+
+/* Cart Item Card Styles */
+.cart-item-card {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.cart-item-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Quantity Adjustment Buttons */
+.quantity-control .btn {
+    background: transparent;
+    border: 1px solid #dee2e6;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+.quantity-control .btn:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Summary Card */
+.order-summary-card {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.order-summary-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background: linear-gradient(to bottom, #383028, #0f0d0b);
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.checkout-btn:hover {
+    background: linear-gradient(to bottom, #1a1916, #0f0d0b);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-btn:disabled {
+    background: #6c757d;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+/* Empty Cart State */
+.empty-cart-alert {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: #495057;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cart-item-card {
+        flex-direction: column;
+    }
+    
+    .cart-item-card img {
+        width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+}
+
+/* Free Shipping Indicator */
+.free-shipping-indicator {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.free-shipping-indicator i {
+    color: #0d6efd;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* Additional Utility Styles */
+.text-muted {
+    color: #6c757d;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
