@@ -1,0 +1,129 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.signup-container {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.signup-header {
+    background: linear-gradient(to right, #212529, #343a40);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.signup-form {
+    padding: 30px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+.submit-btn {
+    background: linear-gradient(to bottom, #383028, #0f0d0b);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to bottom, #1a1916, #0f0d0b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer .fab {
+    transition: transform 0.3s ease;
+}
+
+.footer .fab:hover {
+    transform: translateY(-3px);
+}
+
+.social-signup {
+    margin: 20px 0;
+    position: relative;
+}
+
+.social-signup::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #dee2e6;
+}
+
+.social-signup span {
+    position: relative;
+    background-color: white;
+    padding: 0 15px;
+    color: #6c757d;
+}
+
+.social-btn {
+    border: 1px solid #dee2e6;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn i {
+    margin-right: 10px;
+}
+
+.google-btn i {
+    color: #DB4437;
+}
+
+.facebook-btn i {
+    color: #4267B2;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        margin: 20px;
+        max-width: none;
+    }
+}

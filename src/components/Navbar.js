@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Add this import
 import '../styles/navbar.css'; 
 
 const Navbar = () => {
@@ -106,7 +107,7 @@ const Navbar = () => {
               </button>
             </form>
             <div className="text-light">  
-              <a href="#" className="text-light me-3"><i className="fas fa-user fs-3"></i></a>
+              <Link to="/signup" className="text-light me-3"><i className="fas fa-user fs-3"></i></Link>
               <a href="#" className="text-light position-relative">
                 <i className="fas fa-shopping-cart fs-3"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
