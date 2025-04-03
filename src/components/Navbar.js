@@ -111,7 +111,7 @@ const Navbar = () => {
               <Link to="/cart" className="text-light position-relative">
                 <i className="fas fa-shopping-cart fs-3"></i>
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  3
+                  2
                 </span>
               </Link>
             </div>
