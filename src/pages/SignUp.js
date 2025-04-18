@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/signup.css"; // Import the provided CSS file for styling
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import "../styles/signup.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
   // State for form fields
   const [formData, setFormData] = useState({
     firstName: '',
@@ -17,6 +19,13 @@ const Signup = () => {
 
   // State for form validation errors
   const [errors, setErrors] = useState({});
+  
+  // State for success popup
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  
+  // State for password visibility
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -25,6 +34,15 @@ const Signup = () => {
       ...prevState,
       [id]: type === 'checkbox' ? checked : value
     }));
+  };
+
+  // Toggle password visibility
+  const togglePasswordVisibility = (field) => {
+    if (field === 'password') {
+      setShowPassword(!showPassword);
+    } else if (field === 'confirmPassword') {
+      setShowConfirmPassword(!showConfirmPassword);
+    }
   };
 
   // Validate form before submission
@@ -54,12 +72,15 @@ const Signup = () => {
       newErrors.phone = "Invalid phone number (10 digits required)";
     }
 
-    // Password validation
-    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+    // Password validation - Fixed to properly check requirements
     if (!formData.password) {
       newErrors.password = "Password is required";
-    } else if (!passwordRegex.test(formData.password)) {
-      newErrors.password = "Password must be at least 8 characters, include a number and special character";
+    } else if (formData.password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters";
+    } else if (!/\d/.test(formData.password)) {
+      newErrors.password = "Password must include at least one number";
+    } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(formData.password)) {
+      newErrors.password = "Password must include at least one special character";
     }
 
     // Confirm Password validation
@@ -77,13 +98,21 @@ const Signup = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (validateForm()) {
-      // If validation passes, proceed with signup
-      console.log("Form submitted", formData);
-      // Here you would typically send the data to your backend
+      try {
+        const response = await axios.post("http://localhost:5000/api/signup", formData);
+        console.log(response.data);
+        setShowSuccessPopup(true);
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      } catch (error) {
+        console.error(error);
+        // Handle error (e.g., show an error message)
+      }
     } else {
       console.log("Form has errors");
     }
@@ -102,7 +131,20 @@ const Signup = () => {
 
   return (
     <div className="container">
-      <div className="signup-container">
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div className="success-popup">
+          <div className="success-popup-content">
+            <div className="success-icon">
+              <i className="fas fa-check-circle"></i>
+            </div>
+            <h3>Account Created Successfully!</h3>
+            <p>Redirecting you to the home page...</p>
+          </div>
+        </div>
+      )}
+      
+      <div className={`signup-container ${showSuccessPopup ? 'blur-background' : ''}`}>
         <div className="signup-header">
           <h2>Create Your Account</h2>
           <p className="mb-0">Join Stride for exclusive offers and faster checkout</p>
@@ -160,31 +202,48 @@ const Signup = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
-              <input
-                type="password"
-                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                id="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-              {errors.password ? (
-                <div className="invalid-feedback">{errors.password}</div>
-              ) : (
+              <div className="input-group">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                  id="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+                <button 
+                  type="button" 
+                  className="btn btn-outline-secondary" 
+                  onClick={() => togglePasswordVisibility('password')}
+                >
+                  <i className={`fas ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}></i>
+                </button>
+                {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+              </div>
+              {!errors.password && (
                 <small className="text-muted">Password must be at least 8 characters with a number and special character</small>
               )}
             </div>
             <div className="mb-3">
               <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-              <input
-                type="password"
-                className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
-                id="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-              />
-              {errors.confirmPassword && <div className="invalid-feedback">{errors.confirmPassword}</div>}
+              <div className="input-group">
+                <input
+                  type={showConfirmPassword ? "text" : "password"}
+                  className={`form-control ${errors.confirmPassword ? 'is-invalid' : ''}`}
+                  id="confirmPassword"
+                  value={formData.confirmPassword}
+                  onChange={handleChange}
+                  required
+                />
+                <button 
+                  type="button" 
+                  className="btn btn-outline-secondary" 
+                  onClick={() => togglePasswordVisibility('confirmPassword')}
+                >
+                  <i className={`fas ${showConfirmPassword ? 'fa-eye-slash' : 'fa-eye'}`}></i>
+                </button>
+                {errors.confirmPassword && <div className="invalid-feedback">{errors.confirmPassword}</div>}
+              </div>
             </div>
             <div className="mb-3 form-check">
               <input
@@ -208,7 +267,7 @@ const Signup = () => {
                 required
               />
               <label className="form-check-label" htmlFor="termsAgree">
-                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>
               </label>
               {errors.termsAgree && <div className="invalid-feedback d-block">{errors.termsAgree}</div>}
             </div>

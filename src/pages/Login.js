@@ -1,74 +1,117 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../styles/signup.css"; // Reuse the signup.css for consistent styling
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "../styles/signup.css";
 
 const Login = () => {
-  // State for form fields
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
+  const navigate = useNavigate();
 
-  // State for form validation errors
+  const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showFailurePopup, setShowFailurePopup] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-  // Handle input changes
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setShowSuccessPopup(false);
+        setShowFailurePopup(false);
+      }
+    };
+
+    if (showSuccessPopup || showFailurePopup) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showSuccessPopup, showFailurePopup]);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [id]: value,
-    }));
+    setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  // Validate form before submission
+  const togglePasswordVisibility = () => setShowPassword(!showPassword);
+
   const validateForm = () => {
     const newErrors = {};
-
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
-      newErrors.email = "Invalid email format";
-    }
 
-    // Password validation
-    if (!formData.password.trim()) {
-      newErrors.password = "Password is required";
-    }
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    else if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email format";
+
+    if (!formData.password.trim()) newErrors.password = "Password is required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     if (validateForm()) {
-      // If validation passes, proceed with login
-      console.log("Form submitted", formData);
-      // Here you would typically send the data to your backend for authentication
-    } else {
-      console.log("Form has errors");
+      try {
+        const response = await fetch('http://localhost:5000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+  
+        // Removed: const result = await response.json();
+        await response.json(); // still await to ensure it's handled
+  
+        if (response.ok) {
+          setShowSuccessPopup(true);
+          setShowFailurePopup(false);
+          setTimeout(() => navigate('/'), 2000);
+        } else {
+          setShowFailurePopup(true);
+          setShowSuccessPopup(false);
+        }
+      } catch (error) {
+        console.error('Login error:', error);
+        setShowFailurePopup(true);
+      }
     }
   };
+  
+  
 
-  // Social login handlers (placeholder functions)
-  const handleGoogleLogin = () => {
-    console.log("Google Login Clicked");
-    // Implement Google OAuth login
-  };
-
-  const handleFacebookLogin = () => {
-    console.log("Facebook Login Clicked");
-    // Implement Facebook OAuth login
-  };
+  const handleGoogleLogin = () => console.log("Google Login Clicked");
+  const handleFacebookLogin = () => console.log("Facebook Login Clicked");
 
   return (
     <div className="container">
-      <div className="signup-container">
+      {/* Success Popup */}
+      {showSuccessPopup && (
+        <div className="success-popup">
+          <div className="success-popup-content" ref={popupRef}>
+            <div className="success-icon"><i className="fas fa-check-circle"></i></div>
+            <h3>Login Successful!</h3>
+            <p>Redirecting to your dashboard...</p>
+          </div>
+        </div>
+      )}
+
+      {/* Failure Popup */}
+      {showFailurePopup && (
+        <div className="success-popup">
+          <div className="success-popup-content" ref={popupRef}>
+            <div className="success-icon" style={{ color: "red" }}>
+              <i className="fas fa-times-circle"></i>
+            </div>
+            <h3>Account Not Found!</h3>
+            <p>Please check your email and password or sign up.</p>
+          </div>
+        </div>
+      )}
+
+      <div className={`signup-container ${showSuccessPopup || showFailurePopup ? 'blur-background' : ''}`}>
         <div className="signup-header">
           <h2>Welcome Back!</h2>
           <p className="mb-0">Log in to continue to Stride</p>
@@ -89,15 +132,27 @@ const Login = () => {
             </div>
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
-              <input
-                type="password"
-                className={`form-control ${errors.password ? 'is-invalid' : ''}`}
-                id="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-              {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+              <div className="input-group">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className={`form-control ${errors.password ? 'is-invalid' : ''}`}
+                  id="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary"
+                  onClick={togglePasswordVisibility}
+                >
+                  <i className={`fas ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}></i>
+                </button>
+                {errors.password && <div className="invalid-feedback">{errors.password}</div>}
+              </div>
+            </div>
+            <div className="mb-3 d-flex justify-content-end">
+              <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
             </div>
             <button type="submit" className="submit-btn">Log In</button>
           </form>
@@ -107,18 +162,10 @@ const Login = () => {
           </div>
 
           <div className="d-flex justify-content-between">
-            <button
-              className="social-btn google-btn"
-              onClick={handleGoogleLogin}
-              type="button"
-            >
+            <button className="social-btn google-btn" onClick={handleGoogleLogin} type="button">
               <i className="fab fa-google"></i> Google
             </button>
-            <button
-              className="social-btn facebook-btn"
-              onClick={handleFacebookLogin}
-              type="button"
-            >
+            <button className="social-btn facebook-btn" onClick={handleFacebookLogin} type="button">
               <i className="fab fa-facebook-f"></i> Facebook
             </button>
           </div>
